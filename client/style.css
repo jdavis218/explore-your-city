@@ -1,0 +1,74 @@
+body {
+  background-color: rgb(204, 255, 255);
+  font-family: 'Shadows Into Light Two', cursive;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+h1 {
+  text-align: center;
+  margin: 50px;
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 70px;
+}
+
+#searchArea {
+  text-align: center;
+}
+
+input[type=text] {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 0px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: 'Shadows Into Light Two', cursive;
+}
+
+input[type=submit] {
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 14px 20px;
+    margin: 50px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Shadows Into Light Two', cursive;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(240, 240, 245);
+}
+
+#places {
+  font-size: 25px;
+}
+
+button {
+  width: 20%;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  padding: 14px 20px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: 'Shadows Into Light Two', cursive;
+}
+
+p:nth-child(3) {
+  color: red;
+}
+
+p:nth-child(2) {
+  color: purple;
+}
