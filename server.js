@@ -21,7 +21,11 @@ MongoClient.connect('mongodb://jennafavorites:Rileylove98!@ds021333.mlab.com:213
 
 });
 
-app.get('/', (req, res) => {
+app.get('/', (req,res) => {
+  res.sendFile(__dirname + './client/login.html')
+});
+
+app.get('/main', (req, res) => {
   res.sendFile(__dirname + './client/index.html')
 });
 
