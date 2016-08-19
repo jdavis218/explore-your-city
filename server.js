@@ -3,6 +3,7 @@ const bodyParser= require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const path = require('path');
 const app = express();
+const privateKeys = require('privateKeys.js');
 
 app.use(express.static(__dirname + '/client'));
 // app.use(express.static(__dirname + '/views'));
@@ -12,7 +13,7 @@ app.set("views", path.resolve(__dirname, 'views'));
 app.set("view engine", "ejs");
 
 var db;
-MongoClient.connect('mongodb://jennafavorites:Rileylove98!@ds021333.mlab.com:21333/favorite-places', (err, database) => {
+MongoClient.connect(`mongodb://jennafavorites:${privateKeys.pw}@ds021333.mlab.com:21333/favorite-places`, (err, database) => {
   if (err) return console.log(err);
   db = database;
   app.listen(3000, function() {
@@ -21,12 +22,12 @@ MongoClient.connect('mongodb://jennafavorites:Rileylove98!@ds021333.mlab.com:213
 
 });
 
-app.get('/', (req,res) => {
-  res.sendFile(__dirname + './client/login.html')
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/client/login.html')
 });
 
 app.get('/main', (req, res) => {
-  res.sendFile(__dirname + './client/index.html')
+  res.sendFile(__dirname + '/client/index.html')
 });
 
 app.get('/favorites', function(req, res) {
